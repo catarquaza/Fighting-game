@@ -9,6 +9,14 @@ int main(void)
     Character geoff("Geoff");
     Fight fight(ira, geoff);
 
-    cout << fight.getFightTitle();
+    cout << fight.getFightTitle() << "\n";
+    cout << ira.getHealth() << " vs. " << geoff.getHealth() << "\n";
+
+    while (fight.isOver() == false)
+    {
+        fight.doRound();
+        cout << ira.getHealth() << " vs. " << geoff.getHealth() << "\n";
+    }
+
     return 0;
 }
