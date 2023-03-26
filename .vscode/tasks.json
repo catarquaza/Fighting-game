@@ -3,25 +3,23 @@
 	"tasks": [
 		{
 			"type": "cppbuild",
-			"label": "C/C++: g++.exe build active file",
-			"command": "C:\\mingw\\x86_64-8.1.0-release-posix-seh-rt_v6-rev0\\mingw64\\bin\\g++.exe",
+			"label": "(gdb) build",
+			"command": "g++.exe",
 			"args": [
 				"-fdiagnostics-color=always",
 				"-g",
-				"character.cpp",
-				"fight.cpp",
-				"main.cpp",
+				"${workspaceFolder}/*.cpp",
 				"-o",
 				"main.exe"
 			],
 			"options": {
-				"cwd": "${fileDirname}"
+				"cwd": "${workspaceFolder}"
 			},
 			"problemMatcher": [
 				"$gcc"
 			],
 			"group": "build",
-			"detail": "compiler: C:\\mingw\\x86_64-8.1.0-release-posix-seh-rt_v6-rev0\\mingw64\\bin\\g++.exe"
+			"detail": "compiler: g++.exe"
 		}
 	]
 }
