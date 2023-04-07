@@ -1,6 +1,6 @@
 # Plan
-1. switch to dynamic memory
-2. improve toolchain
+1. improve toolchain
+2. switch to dynamic memory
 3. allow more fighters
 4. allow teams
 5. figure out how to do a team fight
