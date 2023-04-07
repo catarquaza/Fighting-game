@@ -17,6 +17,8 @@ int main(void)
         fight.doRound();
         cout << ira.getHealth() << " vs. " << geoff.getHealth() << "\n";
     }
-
+    
+    fight.getWinner();
+    
     return 0;
 }

@@ -10,7 +10,7 @@ int Character::getHealth(void)
     return health;
 }
 
-void Character::doDamage(int damage)
+void Character::takeDamage(void)
 {
-    health -= damage;
+    health--;
 }

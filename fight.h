@@ -12,6 +12,7 @@ public:
     string getFightTitle(void);
     void doRound(void);
     bool isOver(void);
+    void getWinner(void);
 
 private:
     Character &fighter1;

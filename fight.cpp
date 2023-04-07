@@ -1,6 +1,9 @@
 #include "fight.h"
 #include <cstdlib>
 #include <stdlib.h>
+#include <iostream>
+#include <stdio.h>
+#include <conio.h>
 
 string Fight::getFightTitle(void)
 {
@@ -9,17 +12,37 @@ string Fight::getFightTitle(void)
 
 void Fight::doRound(void)
 {
-    int hitStrength1 = (rand() % 20) + 1;
-    int hitStrength2 = (rand() % 20) + 1;
-    int damage = abs(hitStrength1 - hitStrength2);
+    cout << "choose your move, " << fighter1.getName() << ", strong fast or block (s, f, b):";
+    int move1 = getch();
+    cout << "\n";
 
-    if (hitStrength1 < hitStrength2)
+    cout << "choose your move, " << fighter2.getName() << ", strong fast or block (s, f, b):";
+    int move2 = getch();
+    cout << "\n";
+
+    if (move1 == 's' && move2 == 'b')
     {
-        fighter1.doDamage(damage);
+        fighter2.takeDamage();
     }
-    else
+    else if (move1 == 'b' && move2 == 's')
     {
-        fighter2.doDamage(damage);
+        fighter1.takeDamage();
+    }
+    else if (move1 == 's' && move2 == 'f')
+    {
+        fighter1.takeDamage();
+    }
+    else if (move1 == 'f' && move2 == 's')
+    {
+        fighter2.takeDamage();
+    }
+    else if (move1 == 'f' && move2 == 'b')
+    {
+        fighter1.takeDamage();
+    }
+    else if (move1 == 'b' && move2 == 'f')
+    {
+        fighter2.takeDamage();
     }
 }
 
@@ -37,4 +60,19 @@ bool Fight::isOver(void)
     }
 
     return isOver;
+}
+
+void Fight::getWinner(void)
+{
+    if (isOver())
+    {
+        if (fighter1.getHealth() == 0)
+        {
+            cout << fighter2.getName() << " has won the game";
+        }
+        else
+        {
+            cout << fighter1.getName() << " has won the game";
+        }
+    }
 }

@@ -8,10 +8,10 @@ using namespace std;
 class Character
 {
 public:
-    Character(string name) : name(name), health(100){};
+    Character(string name) : name(name), health(3){};
     string getName(void);
     int getHealth(void);
-    void doDamage(int damage);
+    void takeDamage(void);
 
 private:
     string name;
