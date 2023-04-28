@@ -8,11 +8,11 @@ public:
     {
         srand(time(0));
     };
-    
+
     string getFightTitle(void);
     void doRound(void);
     bool isOver(void);
-    void getWinner(void);
+    void printWinner(void);
 
 private:
     Character &fighter1;

@@ -15,10 +15,11 @@ int main(void)
     while (fight.isOver() == false)
     {
         fight.doRound();
+        cout << ira.getName() << " vs " << geoff.getName() << "\n";
         cout << ira.getHealth() << " vs. " << geoff.getHealth() << "\n";
     }
-    
-    fight.getWinner();
-    
+
+    fight.printWinner();
+
     return 0;
 }

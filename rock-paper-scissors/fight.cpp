@@ -2,8 +2,8 @@
 #include <cstdlib>
 #include <stdlib.h>
 #include <iostream>
-#include <stdio.h>
 #include <conio.h>
+#include <cstdlib>
 
 string Fight::getFightTitle(void)
 {
@@ -62,7 +62,7 @@ bool Fight::isOver(void)
     return isOver;
 }
 
-void Fight::getWinner(void)
+void Fight::printWinner(void)
 {
     if (isOver())
     {
@@ -74,5 +74,7 @@ void Fight::getWinner(void)
         {
             cout << fighter1.getName() << " has won the game";
         }
+
+        system("C:/Users/Ira/Downloads/download.jfif");
     }
 }
